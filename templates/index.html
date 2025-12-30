@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Shop</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h2>📱 Mobile Shop</h2>
+<a href="/add">➕ Add Mobile</a>
+<table>
+<tr>
+    <th>ID</th><th>Brand</th><th>Model</th><th>Price</th><th>Action</th>
+</tr>
+{% for m in mobiles %}
+<tr>
+    <td>{{m[0]}}</td>
+    <td>{{m[1]}}</td>
+    <td>{{m[2]}}</td>
+    <td>{{m[3]}}</td>
+    <td>
+        <a href="/edit/{{m[0]}}">Edit</a> |
+        <a href="/delete/{{m[0]}}">Delete</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
